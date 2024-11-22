@@ -1,5 +1,6 @@
 # Technical Test - Pairing Session
 
+## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/leeroy117/density-labs.git
@@ -76,8 +77,8 @@ In this technical test, an application was developed that involves both **backen
 6. **Yup**: A JavaScript schema builder for value parsing and validation, commonly used with Formik.
 7. **TailwindCSS**: A utility-first CSS framework for building custom designs without writing CSS.
 
-## Installation
 
-### Backend
+
+
 
 
