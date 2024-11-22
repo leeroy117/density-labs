@@ -1,5 +1,27 @@
 # Technical Test - Pairing Session
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/leeroy117/density-labs.git
+
+## For Database
+    docker-compose up
+
+## For Backend
+    cd backend 
+    npm install 
+    npm run dev 
+        or 
+    npm run build and npm run start
+
+## For Frontend
+    cd frontend 
+    npm install 
+    npm run dev 
+        or 
+    npm run build and npm run preview
+
+
 This repository contains the technical test completed during a **pairing** session. Below are the details about the **backend** and **frontend** technologies used in the implementation of this test.
 
 ## General Description
@@ -58,6 +80,4 @@ In this technical test, an application was developed that involves both **backen
 
 ### Backend
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/leeroy117/density-labs.git
+
