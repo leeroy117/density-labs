@@ -38,17 +38,12 @@ export default tseslint.config(
       '@typescript-eslint/no-confusing-void-expression': 0,
       '@typescript-eslint/no-unnecessary-condition': 0,
       '@typescript-eslint/restrict-template-expressions': [ 'error', { allowNumber: true }],
-      'max-len': [
-        'warn',
-        {
-          'code': 80
-        }
-      ],
+      'max-len': ['off'],
       '@stylistic/ts/semi': ['warn'],
-      'comma-dangle': ['warn', 'always-multiline'],
+      'comma-dangle': ['off'],
       'no-console': 1,
       'no-extra-boolean-cast': 0,
-      'indent': ['warn', 2],
+      'indent': ['off'],
       'quotes': ['warn', 'single'],
       'n/no-process-env': 1,
       'n/no-missing-import': 0,

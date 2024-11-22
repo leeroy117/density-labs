@@ -1,8 +1,5 @@
 import { AppDataSource } from '@src/appDataSource';
-import { RouteError } from '@src/common/classes';
-import HttpStatusCodes from '@src/common/HttpStatusCodes';
 import { Comment } from '@src/entity/Comment';
-import moment from 'moment';
 import { UpdateResult } from 'typeorm';
 
 interface IComment {
@@ -19,8 +16,8 @@ function getById(id: string): Promise<Comment|null> {
     
     return AppDataSource
             .getRepository(Comment)
-            .createQueryBuilder("comment")
-            .where("comment.id = :id", { id })
+            .createQueryBuilder('comment')
+            .where('comment.id = :id', { id })
             .getOne();
 }
 
@@ -41,7 +38,7 @@ async function updateOne(comment: IComment): Promise<UpdateResult> {
       .createQueryBuilder()
       .update(Comment)
       .set({ comment: comment.comment, email: comment.email })
-      .where("id = :id", { id: comment.id })
+      .where('id = :id', { id: comment.id })
       .execute();
 }
 
@@ -50,7 +47,7 @@ async function delete_(id: string): Promise<UpdateResult> {
       .getRepository(Comment)
       .createQueryBuilder()
       .softDelete()
-      .where("id = :id", { id })
+      .where('id = :id', { id })
       .execute();
 }
 

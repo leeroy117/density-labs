@@ -6,7 +6,6 @@ import { fetchComments } from './app/features/comments/commentsThunk';
 import { AppDispatch, RootState } from './app/store';
 import FormAddComment from './components/FormAddComment';
 import Swal from 'sweetalert2';
-import Skeleton from 'react-loading-skeleton';
 import CommentSkeleton from './components/CommentSkeleton';
 
 function App() {
@@ -37,7 +36,7 @@ function App() {
         <div className='flex flex-col gap-4 h-full overflow-y-scroll scrollbar p-4'>
           {
             status == 'loading' ? 
-              [0,1,2,3,4].map((i)=><CommentSkeleton />)
+              [0,1,2,3,4].map(()=><CommentSkeleton />)
             :
             comments.map((comment) => {
               return (

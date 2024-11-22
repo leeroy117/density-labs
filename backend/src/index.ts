@@ -3,15 +3,23 @@ import logger from 'jet-logger';
 import EnvVars from '@src/common/EnvVars';
 import server from './server';
 import { AppDataSource } from './appDataSource';
-import "reflect-metadata"
+import 'reflect-metadata';
 
 AppDataSource.initialize()
     .then(() => {
-        console.log("Data Source has been initialized!")
+        // console.info('Data Source has been initialized!');
+        process.stdout.write('Data Source has been initialized!'); 
+        
     })
-    .catch((err) => {
-        console.error("Error during Data Source initialization", err)
-    })
+    .catch((err: unknown) => {
+        if (err instanceof Error) {
+            process.stdout.write('Data Source has been initialized! ' + err.message);
+        } else if (typeof err === 'string') {
+            process.stdout.write('Data Source has been initialized! ' + err);
+        } else {
+            process.stdout.write('An unknown error has been ocurred ');
+        }
+    });
 
 // **** Run **** //
 

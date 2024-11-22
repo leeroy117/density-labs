@@ -70,7 +70,7 @@ export const commentsSlice = createSlice({
         })
         .addCase(addComment.rejected, (state, action) => {
             state.status = 'failed';
-            state.error = null;
+            state.error = action.payload as IError;
         })
 
     builder
@@ -85,7 +85,7 @@ export const commentsSlice = createSlice({
         })
         .addCase(removeComment.rejected, (state, action) => {
             state.status = 'failed';
-            state.error = null;
+            state.error = action.payload as IError;
         })
 
     builder
@@ -102,7 +102,7 @@ export const commentsSlice = createSlice({
         })
         .addCase(updateComment.rejected, (state, action) => {
             state.status = 'failed';
-            state.error = null;
+            state.error = action.payload as IError;
         })
 
   }
