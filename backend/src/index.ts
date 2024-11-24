@@ -13,9 +13,9 @@ AppDataSource.initialize()
     })
     .catch((err: unknown) => {
         if (err instanceof Error) {
-            process.stdout.write('Data Source has been initialized! ' + err.message);
+            process.stdout.write('Data Source has not been initialized! error ' + err.message);
         } else if (typeof err === 'string') {
-            process.stdout.write('Data Source has been initialized! ' + err);
+            process.stdout.write('Data Source has not been initialized! string' + err);
         } else {
             process.stdout.write('An unknown error has been ocurred ');
         }

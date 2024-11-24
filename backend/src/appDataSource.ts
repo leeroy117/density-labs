@@ -1,4 +1,5 @@
 import { DataSource } from 'typeorm';
+import { Comment } from './entity/Comment';
 
 const AppDataSource = new DataSource({
   type: 'postgres',
@@ -7,7 +8,7 @@ const AppDataSource = new DataSource({
   username: 'postgres',
   password: 'densityLabs',
   database: 'densitytest',
-  entities: ['src/entity/*.ts'], // List of entities to be loaded
+  entities: [Comment], // List of entities to be loaded
   synchronize: true,
 });
 
